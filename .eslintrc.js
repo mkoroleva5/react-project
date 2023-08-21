@@ -3,7 +3,12 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb', 'airbnb-typescript'],
+  extends: [
+    'plugin:react/recommended',
+    'airbnb',
+    'airbnb-typescript',
+    'plugin:i18next/recommended',
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -14,7 +19,7 @@ module.exports = {
     project: './tsconfig.json',
   },
   ignorePatterns: ['.eslintrc.js'],
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'i18next'],
   rules: {
     'react/jsx-indent': [2, 2],
     'react/jsx-indent-props': [2, 2],
@@ -57,6 +62,7 @@ module.exports = {
         filter: '__typename',
       },
     ],
+    'i18next/no-literal-string': ['error', { markupOnly: true }],
   },
   globals: {
     __IS_DEV__: true,

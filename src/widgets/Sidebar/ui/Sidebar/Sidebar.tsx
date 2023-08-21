@@ -22,7 +22,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
       })}
     >
       <button type="button" onClick={onToggle}>
-        toggle
+        123
       </button>
       <div
         className={classNames(styles.switchers, [], {
