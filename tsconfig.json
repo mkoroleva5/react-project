@@ -11,6 +11,8 @@
     "paths": {
       "*": ["./src/*"]
     },
+    /* "noEmit": true, */
+    /* "types": ["@types/node"], */
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true
   },
@@ -19,4 +21,5 @@
       "module": "CommonJS"
     }
   }
+  /* "include": ["webpack.config.ts", ".eslintrc.js"] */
 }

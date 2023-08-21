@@ -3,15 +3,62 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["plugin:react/recommended", "airbnb"],
-  parser: "@typescript-eslint/parser",
+  extends: ['plugin:react/recommended', 'airbnb', 'airbnb-typescript'],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: "latest",
-    sourceType: "module",
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: './tsconfig.json',
   },
-  plugins: ["react", "@typescript-eslint"],
-  rules: {},
+  ignorePatterns: ['.eslintrc.js'],
+  plugins: ['react', '@typescript-eslint'],
+  rules: {
+    'react/jsx-indent': [2, 2],
+    'react/jsx-indent-props': [2, 2],
+    'react/jsx-filename-extension': [
+      2,
+      { extensions: ['.js', '.jsx', '.tsx'] },
+    ],
+    'import/no-unresolved': 'off',
+    'import/prefer-default-export': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'no-unused-vars': [
+      'warn',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_',
+      },
+    ],
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_',
+      },
+    ],
+    'react/require-default-props': 'off',
+    'react/function-component-definition': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-props-no-spreading': 'warn',
+    'no-shadow': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'operator-linebreak': 'off',
+    'no-underscore-dangle': 'off',
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: 'variable',
+        format: ['camelCase', 'UPPER_CASE'],
+        filter: '__typename',
+      },
+    ],
+  },
+  globals: {
+    __IS_DEV__: true,
+  },
 };
