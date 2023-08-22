@@ -23,11 +23,9 @@ module.exports = {
   plugins: ['react', '@typescript-eslint', 'i18next'],
   rules: {
     'react/jsx-indent': [2, 2],
+    '@typescript-eslint/indent': [2, 2],
     'react/jsx-indent-props': [2, 2],
-    'react/jsx-filename-extension': [
-      2,
-      { extensions: ['.js', '.jsx', '.tsx'] },
-    ],
+    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'implicit-arrow-linebreak': 'off',
@@ -51,10 +49,7 @@ module.exports = {
     'react/function-component-definition': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'warn',
-    'react/jsx-wrap-multilines': [
-      'error',
-      { declaration: false, assignment: false },
-    ],
+    'react/jsx-wrap-multilines': ['error', { declaration: false, assignment: false }],
     'no-shadow': 'off',
     'import/no-extraneous-dependencies': 'off',
     'operator-linebreak': 'off',
@@ -68,6 +63,7 @@ module.exports = {
       },
     ],
     'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'no-console': ['warn', { allow: ['warn', 'error'] }],
   },
   globals: {
     __IS_DEV__: true,
