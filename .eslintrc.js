@@ -51,6 +51,10 @@ module.exports = {
     'react/function-component-definition': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'warn',
+    'react/jsx-wrap-multilines': [
+      'error',
+      { declaration: false, assignment: false },
+    ],
     'no-shadow': 'off',
     'import/no-extraneous-dependencies': 'off',
     'operator-linebreak': 'off',
