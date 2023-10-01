@@ -24,8 +24,8 @@
   "include": [
     "./.eslintrc.js",
     "./webpack.config.ts",
-    "./config/jest/**.ts",
-    "./config/jest/**.tsx",
+    "./config/**/**.ts",
+    "./config/**/**.tsx",
     "./src/**/*.ts",
     "./src/**/*.tsx"
   ]
